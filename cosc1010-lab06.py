@@ -58,7 +58,7 @@ ibmkdwkqmdkjesqnjiqpijixbwjhenmsrrlpcseliiajlvcaac
 zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
-print(f"{len(random_string)}\n") # Print out the size for reference 
+print(f"\n{len(random_string)}\n") # Print out the size for reference 
 
 ch_dict = {}
 
@@ -70,12 +70,27 @@ for charactor in random_string:
     else:
         ch_dict[charactor] = count
     #print(f"The character '{ch_to_cnt}' appears {count} times in the string.")
-print(ch_dict)
+#print(ch_dict)
 
 sorted_dict = {k: ch_dict[k] for k in sorted(ch_dict)}
 print(sorted_dict)
+most_occurred = ""
+most_occurred_count = 0
+least_occurred = ""
+least_occurred_count = 1000
+for letter in sorted_dict:
+    ammt = sorted_dict[letter]
+    if ammt > most_occurred_count:
+        most_occurred_count = ammt
+        most_occurred = letter
+print(f"The letter that occurred the most is {most_occurred} and it occured {most_occurred_count} times")
 
-
+for letter in sorted_dict:
+    ammt = sorted_dict[letter]
+    if ammt < least_occurred_count:
+        least_occurred_count = ammt
+        least_occurred = letter
+print(f"The letter that occurred the least is {least_occurred} and it occured {least_occurred_count} times")
 
 
 # Above is a string with 2500 characters.
@@ -101,9 +116,6 @@ print(sorted_dict)
 
 print("*"*75)
 # Output which letter occurred the most 
-
-most_occurred = ""
-least_occurred = ""
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
