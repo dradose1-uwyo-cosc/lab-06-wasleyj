@@ -100,6 +100,7 @@ for letter in sorted_dict:
     prcnt = cnt / 2500 * 100
     print(f"{letter.upper()} is {prcnt}% of the random string presented")
 print("*"*75)
+
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
 # Output each letter and its corresponding occurrence in alphabetical order
