@@ -58,8 +58,9 @@ ibmkdwkqmdkjesqnjiqpijixbwjhenmsrrlpcseliiajlvcaac
 zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
-print(f"\n{len(random_string)}\n") # Print out the size for reference 
-
+print("*"*75)
+print(f"{len(random_string)}") # Print out the size for reference 
+print("*"*75)
 ch_dict = {}
 
 for charactor in random_string:
@@ -77,7 +78,7 @@ print(sorted_dict)
 most_occurred = ""
 most_occurred_count = 0
 least_occurred = ""
-least_occurred_count = 1000
+least_occurred_count = 10000
 for letter in sorted_dict:
     ammt = sorted_dict[letter]
     if ammt > most_occurred_count:
@@ -114,13 +115,13 @@ print(f"The letter that occurred the least is {least_occurred} and it occured {l
 
 # Output: each letter and its corresponding occurrence in alphabetical order
 
-print("*"*75)
+#print("*"*75)
 # Output which letter occurred the most 
 
-print(f"The letter that occurred the most is {most_occurred}")
-print("*"*75)
+#print(f"The letter that occurred the most is {most_occurred}")
+#print("*"*75)
 # Output which letter occurred the least 
-print(f"The letter that occurred the most is {least_occurred}")
+#print(f"The letter that occurred the most is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
