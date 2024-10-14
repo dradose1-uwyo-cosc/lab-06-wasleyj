@@ -58,7 +58,7 @@ ibmkdwkqmdkjesqnjiqpijixbwjhenmsrrlpcseliiajlvcaac
 zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
-print(len(random_string)) # Print out the size for reference 
+print(f"{len(random_string)}\n") # Print out the size for reference 
 
 ch_dict = {}
 
@@ -69,8 +69,11 @@ for charactor in random_string:
         continue
     else:
         ch_dict[charactor] = count
-    print(f"The character '{ch_to_cnt}' appears {count} times in the string.")
+    #print(f"The character '{ch_to_cnt}' appears {count} times in the string.")
 print(ch_dict)
+
+sorted_dict = {k: ch_dict[k] for k in sorted(ch_dict)}
+print(sorted_dict)
 
 
 
