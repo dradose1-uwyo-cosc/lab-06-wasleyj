@@ -75,25 +75,31 @@ for charactor in random_string:
 
 sorted_dict = {k: ch_dict[k] for k in sorted(ch_dict)}
 print(sorted_dict)
+print("*"*75)
 most_occurred = ""
 most_occurred_count = 0
 least_occurred = ""
 least_occurred_count = 10000
+
 for letter in sorted_dict:
     ammt = sorted_dict[letter]
     if ammt > most_occurred_count:
         most_occurred_count = ammt
         most_occurred = letter
-print(f"The letter that occurred the most is {most_occurred} and it occured {most_occurred_count} times")
-
+print(f"The letter that occurred the most is {most_occurred.upper()} and it occured {most_occurred_count} times")
+print("*"*75)
 for letter in sorted_dict:
     ammt = sorted_dict[letter]
     if ammt < least_occurred_count:
         least_occurred_count = ammt
         least_occurred = letter
-print(f"The letter that occurred the least is {least_occurred} and it occured {least_occurred_count} times")
-
-
+print(f"The letter that occurred the least is {least_occurred.upper()} and it occured {least_occurred_count} times")
+print("*"*75)
+for letter in sorted_dict:
+    cnt = sorted_dict[letter]
+    prcnt = cnt / 2500 * 100
+    print(f"{letter.upper()} is {prcnt}% of the random string presented")
+print("*"*75)
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
 # Output each letter and its corresponding occurrence in alphabetical order
@@ -122,6 +128,6 @@ print(f"The letter that occurred the least is {least_occurred} and it occured {l
 #print("*"*75)
 # Output which letter occurred the least 
 #print(f"The letter that occurred the most is {least_occurred}")
-print("*"*75)
+#print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
