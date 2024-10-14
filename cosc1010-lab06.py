@@ -1,12 +1,8 @@
-# Your Name Here
+# Wesley
 # UWYO COSC 1010
-# Submission Date
+# 100/14/20024
 # Lab 06
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Lab Section: 14 
 
 
 random_string = """
@@ -63,6 +59,21 @@ zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
 print(len(random_string)) # Print out the size for reference 
+
+ch_dict = {}
+
+for charactor in random_string:
+    ch_to_cnt = charactor
+    count = random_string.count(ch_to_cnt)
+    if charactor in ch_dict:
+        continue
+    else:
+        ch_dict[charactor] = count
+    print(f"The character '{ch_to_cnt}' appears {count} times in the string.")
+print(ch_dict)
+
+
+
 
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
