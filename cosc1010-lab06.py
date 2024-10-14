@@ -70,7 +70,7 @@ for charactor in random_string:
         continue
     else:
         ch_dict[charactor] = count
-    #print(f"The character '{ch_to_cnt}' appears {count} times in the string.")
+    #print(f"The character {ch_to_cnt} appears {count} times in the string.")
 #print(ch_dict)
 
 sorted_dict = {k: ch_dict[k] for k in sorted(ch_dict)}
